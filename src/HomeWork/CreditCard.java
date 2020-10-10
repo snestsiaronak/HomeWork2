@@ -21,6 +21,10 @@ public class CreditCard {
             System.out.println("Номер карты указан не корректно!");
             rez++;
         }
+        if(!validCard.validdigit(card.cardnumber)){
+            System.out.println("Номер карты указан не корректно!");
+            rez++;
+        }
         if(!validCard.validcardview(card.cardview)){
             System.out.println("Вид карты указан не корректно!");
             rez++;
@@ -71,6 +75,9 @@ public class CreditCard {
             if (Integer.toString(cvv).length() == 3) {
                 return true;
             } else return false;
+        }
+        public boolean validdigit(String numbercard){
+            return numbercard.matches("[0-9]+");
         }
     }
 }

@@ -13,12 +13,14 @@ public class Computer {
         this.sizeRAM = sizeRAM;
         this.sizeHDD = sizeHDD;
     }
+
     public void printinfo(Computer comp) {
         System.out.println("Характеристики компьютера:");
         System.out.println("Процессор: " + comp.processor);
         System.out.printf("Объем оперативной памяти %d GB \n", comp.sizeRAM);
         System.out.printf("Объем жесткого диска %d GB \n", comp.sizeHDD);
     }
+
     public int turnOnOf(int status) {
         int n = 1, m = 0, rez = 10;
         Random random = new Random();
@@ -26,8 +28,7 @@ public class Computer {
         ident = readnum();
         boolean tmp = random.nextBoolean();
         int rdmnumber;
-        if (tmp) rdmnumber = 1;
-        else rdmnumber = 0;
+        rdmnumber = tmp ? 1 : 0;
         switch (status) {
             case 0:
                 if (ident == rdmnumber) {
@@ -52,6 +53,7 @@ public class Computer {
         }
         return rez;
     }
+
     private int readnum() {
         int rez = -1;
         Scanner scan = new Scanner(System.in);
