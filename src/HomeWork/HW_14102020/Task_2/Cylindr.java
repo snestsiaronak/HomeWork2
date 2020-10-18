@@ -11,7 +11,7 @@ public class Cylindr extends Round{
     }
 
     @Override
-    public double calculatevolume() {
+    public double calculateVolume() {
         double tmp = getRadius();
         return PI*tmp*tmp*height;
     }

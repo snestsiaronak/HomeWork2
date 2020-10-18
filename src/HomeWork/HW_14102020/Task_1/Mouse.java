@@ -5,6 +5,7 @@ public class Mouse extends Animal implements Shout {
         super(name, agressionlevel);
     }
 
+    @Override
     public void shout() {
         System.out.println(getName() + " shout PI-PI-PI!!!");
     }

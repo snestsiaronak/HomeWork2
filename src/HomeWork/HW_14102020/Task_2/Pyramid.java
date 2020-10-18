@@ -10,7 +10,7 @@ public class Pyramid extends Shape{
     }
 
     @Override
-    public double calculatevolume() {
+    public double calculateVolume() {
         return squarebase*height/3;
     }
 }

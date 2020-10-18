@@ -17,11 +17,11 @@ public class Main {
                 "для выхода введите 0");
         while (flag) {
             System.out.println("Свободный объем коробки: " + boxvolume);
-            int nn = inputchoise();
+            int nn = inputChoise();
             switch (nn) {
                 case 1:
-                    if (isvolume(boxvolume, pyramid.calculatevolume())) {
-                        boxvolume = addvolume(boxvolume, pyramid.calculatevolume());
+                    if (isVolume(boxvolume, pyramid.calculateVolume())) {
+                        boxvolume = addVolume(boxvolume, pyramid.calculateVolume());
                         quantitypyramid++;
                         System.out.println("Пирамида добавлени, давай еще!");
                     } else {
@@ -30,8 +30,8 @@ public class Main {
                     }
                     break;
                 case 2:
-                    if (isvolume(boxvolume, cylindr.calculatevolume())) {
-                        boxvolume = addvolume(boxvolume, cylindr.calculatevolume());
+                    if (isVolume(boxvolume, cylindr.calculateVolume())) {
+                        boxvolume = addVolume(boxvolume, cylindr.calculateVolume());
                         quantitycylindr++;
                         System.out.println("Цилиндр добавлен, давай еще!");
                     } else {
@@ -40,8 +40,8 @@ public class Main {
                     }
                     break;
                 case 3:
-                    if (isvolume(boxvolume, ball.calculatevolume())) {
-                        boxvolume = addvolume(boxvolume, ball.calculatevolume());
+                    if (isVolume(boxvolume, ball.calculateVolume())) {
+                        boxvolume = addVolume(boxvolume, ball.calculateVolume());
                         quantityball++;
                         System.out.println("Шар добавлен, давай еще!");
                     } else {
@@ -58,15 +58,15 @@ public class Main {
                 "\nКоличество шаров в коробке " + quantityball);
     }
 
-    public static boolean isvolume(double maxvol, double advol) {
+    public static boolean isVolume(double maxvol, double advol) {
         return (maxvol > advol) ? true : false;
     }
 
-    public static double addvolume(double maxvol, double advol) {
+    public static double addVolume(double maxvol, double advol) {
         return maxvol - advol;
     }
 
-    public static int inputchoise() {
+    public static int inputChoise() {
         Scanner scann = new Scanner(System.in);
         while (!scann.hasNextInt()) {
             System.out.print("Это не целое числло! Попробуй еще раз! ");

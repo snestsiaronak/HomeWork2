@@ -5,6 +5,7 @@ public class Dog extends Animal implements Shout {
         super(name, agressionlevel);
     }
 
+    @Override
     public void shout() {
         System.out.println(getName() + " shout WOOF!!!");
     }

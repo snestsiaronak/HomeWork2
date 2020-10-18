@@ -5,6 +5,7 @@ public class Cat extends Animal implements Shout {
         super(name, agressionlevel);
     }
 
+    @Override
     public void shout() {
         System.out.println(getName() + " shout MEOW!!!");
     }

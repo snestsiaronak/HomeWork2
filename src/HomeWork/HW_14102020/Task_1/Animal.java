@@ -23,17 +23,17 @@ public class Animal implements Run, Eat, Shout {
     }
 
     @Override
-    public void beeaten(Animal animal1, Animal animal2) {
+    public void beeAten(Animal animal1, Animal animal2) {
         System.out.println(animal1.getName() + " eaten " + animal2.getName());
     }
 
     @Override
-    public void runaway(Animal animal1, Animal animal2) {
+    public void runAway(Animal animal1, Animal animal2) {
         System.out.println(animal1.getName() + " ran away from " + animal2.getName());
     }
 
     @Override
-    public void catchingup(Animal animal1, Animal animal2) {
+    public void catchingUp(Animal animal1, Animal animal2) {
         System.out.println(animal1.getName() + " caught up with " + animal2.getName());
     }
 
