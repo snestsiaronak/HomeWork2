@@ -6,7 +6,7 @@ public class Main {
         boolean flag = true;
         Timer timer = new Timer();
         while (flag) {
-            timer.writeTime(timer.convertTime(sec));
+            timer.writeTime(sec);
             try {
                 Thread.sleep(10000);
             } catch (InterruptedException ex) {
