@@ -27,8 +27,7 @@ public class YoungBotanApp {
         Set<String> uniqueType = new HashSet<>(map.values());
         for (String type : uniqueType) {
             System.out.println(type + " is:");
-            Set<Map.Entry<String, String>> entrySet = map.entrySet();
-            for (Map.Entry<String, String> tmp : entrySet) {
+            for (Map.Entry<String, String> tmp : map.entrySet()) {
                 if (type.equals(tmp.getValue())) {
                     System.out.println(tmp.getKey());
                 }

@@ -1,9 +1,6 @@
 package HomeWork.HW_28102020.Task_3;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,12 +14,12 @@ public class Main {
         someMap.put(6, "маленькая собачонка");
 
 
-        Set<Integer> allKeys=someMap.keySet();
-        for(int tmp : allKeys){
+        ArrayList<Integer> allKeys = new ArrayList<>(someMap.keySet());
+        for (int tmp : allKeys) {
             System.out.println(tmp);
         }
-        Collection<String> allValues= someMap.values();
-        for (String tmp : allValues){
+        ArrayList<String> allValues = new ArrayList<>(someMap.values());
+        for (String tmp : allValues) {
             System.out.println(tmp);
         }
     }
